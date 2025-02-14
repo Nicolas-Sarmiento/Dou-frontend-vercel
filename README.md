@@ -1,13 +1,25 @@
-# Dou-frontend🦜
+# Dou-frontend 🦜
 
-Bienvenido al corazon visual de DOU (Plataforma de entrenamiento de programacion competitiva)
+Bienvenido al corazón visual de **DOU** (Plataforma de entrenamiento de programación competitiva).
 
-Este repositorio esta enfocado netamente en el ambito visual de la plataforma, es decir, el frontend.
+**DOU** es una iniciativa ideada y desarrollada por:
+- **Nicolás Sarmiento**
+- **Nicolás Tinjaca**
+- **José Salamanca**
 
+Estudiantes de la **UPTC** en la carrera de **Ingeniería de Sistemas**. El objetivo de **DOU** es ofrecer a toda la comunidad estudiantil una herramienta excelente para el desarrollo de habilidades como programador. Se enfoca en una rama de la programación: **Competitive Programming**. Aunque también se puede usar para aprender programación en general.
+
+El proyecto está dividido en `n` número de partes. Prácticas y Contests, Tutorials, Clases, etc.
+
+Este repositorio está enfocado netamente en el ámbito visual de la plataforma, es decir, el **frontend**:
 - Interfaz de usuario
-- Integracion con backend
+- Integración con backend
 - ...
-<div align="center">
-    <img src="./read.jpg" alt="Dou-frontend" width="200px" style="border-radius: 10px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);"/>
-</div>
 
+---
+
+## Tecnologías usadas
+- React
+- CSS
+- Vite
+- JS
