@@ -1,4 +1,3 @@
-import './App.css'
 import { AppUI } from './AppUI'
 
 function App() {

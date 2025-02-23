@@ -2,12 +2,12 @@ import React from "react";
 import { useState } from "react";
 
 export function LoginForm ( { onSwitchToRegister, onSwitchToForgotPassword } ) {
-    const {email, setEmail} = useState("");
-    const {password, setPassword} = useState("");
-    const {error, setError} = useState("");
-    const {loading, setLoading} = useState(false);
-    const {user, setUser} = useState(null);
-    const {setIsLoggedIn} = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [user, setUser] = useState(null);
+    const [setIsLoggedIn] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,16 +22,14 @@ export function LoginForm ( { onSwitchToRegister, onSwitchToForgotPassword } ) {
     
     return (
         <>
-            <form onSubmit={handleSubmit} className="dou-login-form">
-                <h2>DOU</h2>
-
+            <form onSubmit={handleSubmit} className="dou-login-form">   
                 <input
                     className="dou-login-input"
                     type="email" 
                     name="email"
                     placeholder="Email" 
                     value={email} 
-                    onChange={(e) => setEmail(e.target.value)} 
+                    onChange={(e) => {setEmail(e.target.value)}} 
                     required 
                 />
 

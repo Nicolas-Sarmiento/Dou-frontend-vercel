@@ -1,17 +1,12 @@
 import React from "react";
-import { useState } from "react";
-import { AuthContainer } from "../components/LogIn";
+import { MainPage } from "../components/main_page";
 
 export function AppUI () {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    
 
     return (
         <>
-            {isLoggedIn ? (
-                <p>Hola</p>
-            ) : (
-                <AuthContainer />
-            )}
+            <MainPage />
         </>
     )
 }

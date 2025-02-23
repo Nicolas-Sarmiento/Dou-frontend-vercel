@@ -1,0 +1,33 @@
+.dou-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    background-color: #152126;
+    color: #f5f5f5;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    box-shadow: 0 2px 4px #B5E2F2;
+}
+
+.dou-header-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #152126;
+    border: none;
+    cursor: pointer;
+}
+.dou-main-button {
+    border: none;
+    background-color: inherit;
+    font-size: 1.3rem;
+    transition-duration: 0.3s;
+}
+
+.dou-main-button:hover {
+    color: #86d6f3;
+}
