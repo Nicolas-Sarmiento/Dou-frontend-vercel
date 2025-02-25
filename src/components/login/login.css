@@ -5,6 +5,8 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    grid-row: 2 / -1;
+    grid-column: 2 / -1;
 }
 
 .dou-login-form {

@@ -2,14 +2,14 @@
     display: grid;
     grid-template-rows: auto 5fr;
     grid-template-columns: 6fr 3fr;
-    background-color: #152126;
+    background-color: black;
     color: #fff;
-    height: 100vh;
+    height: auto;
     width: 100vw;
 }
 
 .dou-main-content {
-    grid-row: 2 / -1;
+    grid-row: 1 / -1;
     grid-column: 1 / 2;
 }
 

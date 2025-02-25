@@ -1,14 +1,18 @@
 import React from "react";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 export function Header () {
+    const handleMainClick = () => {
+        window.location.reload();
+    };
     return (
         <div className="dou-header">
-            <button className="dou-main-button">
-                <a href=""></a>DOU
+            <button className="dou-main-button" onClick={handleMainClick}>
+                DOU
             </button>
             <button className="dou-header-button">
-                <a href="/info_main">Sobre nosotos</a>
+                <Link to="/about">Sobre nosotros</Link>
             </button>
         
         </div>

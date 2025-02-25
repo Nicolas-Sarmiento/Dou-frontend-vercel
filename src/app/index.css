@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #152126;
+  background-color: black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,9 +25,27 @@ body {
   min-height: 100vh;
 }
 
+.app {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 60px 6fr;
+  background-color: black;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+}
+
+.dou-header {
+  grid-row: 1 / 2;
+}
+
+.main_page {
+  grid-row: 2 / 3;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #152126;
+    color: black;
     background-color: #ffffff;
   }
 }
