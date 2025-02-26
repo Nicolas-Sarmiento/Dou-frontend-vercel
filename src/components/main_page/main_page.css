@@ -1,17 +1,16 @@
 .main_page {
     display: grid;
-    grid-template-rows: auto 5fr;
-    grid-template-columns: 6fr 3fr;
-    background-color: black;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: transparent;
     color: #fff;
-    height: auto;
+    height: 100%;
     width: 100vw;
+    position: relative;
 }
 
 .dou-main-content {
     grid-row: 1 / -1;
     grid-column: 1 / 2;
+    position: relative;
+    z-index: 1;
 }
-
-
-
