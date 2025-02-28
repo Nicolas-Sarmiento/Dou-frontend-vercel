@@ -1,10 +1,12 @@
 import React from "react";
 import "./header.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Header () {
+    const navigate = useNavigate();
     const handleMainClick = () => {
-        window.location.reload();
+        navigate("/");
     };
     return (
         <div className="dou-header">

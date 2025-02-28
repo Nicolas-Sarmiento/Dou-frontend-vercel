@@ -6,11 +6,12 @@
     height: 100%;
     width: 100vw;
     position: relative;
+    z-index: 5;
 }
 
-.dou-main-content {
+/* .dou-main-content {
     grid-row: 1 / -1;
     grid-column: 1 / 2;
     position: relative;
     z-index: 1;
-}
+} */
