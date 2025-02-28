@@ -1,3 +1,24 @@
+.dou-back-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+.dou-back-login svg {
+    height: 40px;
+    width: 40px;
+    fill: #fff;
+    transition-duration: 0.3s;
+}
+.dou-back-login svg:hover {
+    scale: 1.1;
+}
+
 .dou-login-container {
     display: flex;
     flex-direction: column;
@@ -6,6 +27,7 @@
     height: 100%;
     width: 100%;
     grid-column: 2 / 3;
+    transition-duration: 0.3s;
 }
 
 .dou-login-form {

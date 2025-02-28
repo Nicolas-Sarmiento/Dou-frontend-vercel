@@ -1,8 +1,8 @@
 import React from "react";
-import { MainPage } from "../components/main_page";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import { Header } from "../components/header";
 import "./meteor.css";
+import { AppRoutes } from "./AppRoutes";
 
 export function AppUI () {
     
@@ -17,9 +17,7 @@ export function AppUI () {
                 ))}
                 
                 <Header />
-                <Routes>
-                    <Route path="/" element={<MainPage />} />
-                </Routes>
+                <AppRoutes />
                 
             </div>
             
