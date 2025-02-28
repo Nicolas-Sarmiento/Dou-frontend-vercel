@@ -1,4 +1,5 @@
 .dou-back-login {
+    padding: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,8 +11,8 @@
 }
 
 .dou-back-login svg {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     fill: #fff;
     transition-duration: 0.3s;
 }
@@ -25,8 +26,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 100%;
-    grid-column: 2 / 3;
+    max-width: 600px;
     transition-duration: 0.3s;
 }
 

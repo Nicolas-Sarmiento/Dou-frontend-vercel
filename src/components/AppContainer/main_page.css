@@ -1,12 +1,11 @@
 .main_page {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: transparent;
+    display: flex;
     color: #fff;
     height: 100%;
     width: 100vw;
     position: relative;
     z-index: 5;
+    justify-content: center;
 }
 
 /* .dou-main-content {
