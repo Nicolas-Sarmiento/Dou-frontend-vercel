@@ -5,9 +5,18 @@ import { Dashboard } from "../components/Dashboard/index";
 import { LoginForm } from "../components/login/LoginForm";
 import { RegisterForm } from "../components/login/RegisterForm";
 import { ForgotPasswordForm } from "../components/login/ForgotPasswordForm";
+import { useAuth } from "../Context/AuthContext";
 
 export function AppRoutes () {
     const navigate = useNavigate();
+
+    function ProtectedRoute({ children }) {
+        const { user, loading } = useAuth();
+        const navigate = useNavigate();
+        if (loading) return <div>Cargando...</div>;
+        return user ? children : <LoginForm onSwitchToRegister={() => navigate("/register")} onSwitchToForgotPassword={() => navigate("/forgot-password")} />;
+    }
+    
     return (
         <AppContainer>
             <Routes>
@@ -30,7 +39,7 @@ export function AppRoutes () {
                     path="/forgot-password"
                     element={<ForgotPasswordForm onSwitchToLogin={() => navigate("/login")} />}
                 />
-                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
                 <Route path="*" element={<h1>404 - Página no encontrada</h1>} />
             </Routes>
         </AppContainer>

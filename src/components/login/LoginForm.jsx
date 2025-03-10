@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../Context/AuthContext";
 import "../login/login.css";
 
 export function LoginForm ( { onSwitchToRegister, onSwitchToForgotPassword } ) {
@@ -12,64 +13,19 @@ export function LoginForm ( { onSwitchToRegister, onSwitchToForgotPassword } ) {
     const [loggedIn, setIsLoggedIn] = useState(false);
     const [attempts, setAttempts] = useState(0);
     const navigate = useNavigate();
+    const { login } = useAuth();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setError('');
         setLoading(true);
-
-        if (!email || !password) {
-            setError("Debes completar todos los campos");
-            return;
-        }
-
-        // try {
-        //     const response = await fetch(' http://localhost:3001/login', 
-        //         {
-        //             method: 'POST',
-        //             headers: {
-        //                 'Content-Type': 'application/json',
-        //                 'x-access-token': "provisional"
-        //             },
-        //             body: JSON.stringify({email, password})
-        //         }
-        //     );
-
-        //     if ( !response.ok ){
-        //         setAttempts(attempts + 1);
-        //         if (attempts >= 3) {
-        //             setError("Demasiados intentos. Intentalo en un minuto");
-        //             setTimeout( () => {
-        //                 setAttempts(0), 60000;
-        //             })
-        //         } else {
-        //             setError("Credenciales invalidas");
-        //         }
-        //         setLoading(false);
-        //         return; 
-        //     }
-
-        //     const data = await response.json();
-        //     setUser(data);
-        //     setIsLoggedIn(true);
-        //     navigate("/");
-
-        // } catch (error) {
-        //     setError("Error al iniciar");
-        // } finally {
-        //     setLoading(false);
-        // }
-
-        if (email === 'algo@gmail.com' && password === '1234') {
-            
-            setIsLoggedIn(true);
+        try {
+            await login(email, password);
+            setError("");
+        } catch (err) {
+            setError(err.message || "Error al iniciar sesión");
+        } finally {
             setLoading(false);
-            navigate("/dashboard");
-            
         }
-        
-        console.log(email, password);
-        setError('');
     };
     
     return (
