@@ -145,14 +145,28 @@
 }
 
 .dou-strip-options {
+    align-items: center;
     position: absolute;
     top: 100%;
     right: 0;
     width: 200px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    height: auto;
+    background-color: #86d6f3;
     padding: 10px;
     z-index: 100;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.dou-strip-options.open {
+    opacity: 1;
+}
+
+.dou-strip-option {
+    background-color: transparent;
+    color: black;
+    font-size: 1.1rem;
+    border: none;
 }
 
 /* User and menu */
