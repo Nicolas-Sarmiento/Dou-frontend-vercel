@@ -46,7 +46,6 @@ export function Header () {
             <nav className={user ? "dou-header-nav dou-header-nav-logged" : "dou-header-nav"}>
                 {user ? (
                     <>
-                    <LinkModules />
                     <div className="user-menu">
                         <div className="avatar-container">
                             <img
@@ -63,6 +62,7 @@ export function Header () {
                             )}
                         </div>
                     </div>
+                    <LinkModules />
                     </>
                 ) : (
                     <>
