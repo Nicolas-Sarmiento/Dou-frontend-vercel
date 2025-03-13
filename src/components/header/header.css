@@ -1,7 +1,6 @@
 .dou-header {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     height: 60px;
@@ -9,17 +8,28 @@
     color: #f5f5f5;
 }
 
+.dou-header.logged {
+    justify-content: space-between;
+}
 
 .dou-header-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border: none;
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: transparent;  
+    color: #f5f5f5; 
+    text-decoration: none; 
+    font-size: 16px; 
+    font-weight:400;
+    border-radius: 5px; 
+    border: none; 
     cursor: pointer;
+    transition-duration: 0.3s;
 }
+
+.dou-header-button:hover {
+    color: #86d6f3;
+}
+
 .dou-main-button {
     border: none;
     background-color: inherit;
@@ -28,6 +38,9 @@
     font-weight: 500;
 }
 
+.dou-about {
+    text-decoration: none;
+}
 .dou-main-button:hover {
     color: #86d6f3;
 }

@@ -39,7 +39,7 @@ export function Header () {
 
     return (
 
-        <div className="dou-header">
+        <div className={ user ? "dou-header logged":"dou-header"}>
             <button className="dou-main-button" onClick={handleMainClick}>
                 DOU
             </button>
@@ -55,7 +55,7 @@ export function Header () {
                                 className="avatar"
                                 onClick={handleAvatarClick}
                             />
-                                {/* Desplegable */}
+
                             {isDropdownVisible && (
                                 <div className={`dropdown ${isDropdownOpen ? "open" : ""}`}>
                                     <button onClick={handleLogout}>Cerrar sesión</button>
@@ -66,9 +66,7 @@ export function Header () {
                     </>
                 ) : (
                     <>
-                        <button className="dou-header-button">
-                            <Link to="/about">Sobre nosotros</Link>
-                        </button>
+                        <Link to="/about" className="dou-header-button">Sobre nosotros</Link>
                     </>
                 )}
             </nav>
