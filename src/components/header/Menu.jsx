@@ -1,11 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "../header/header.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function LinkModules() {
     const [showOptions, setShowOptions] = useState(false);
     const [isDropdownVisible, setIsDropdownVisibleOpen] = useState(false);
+    const dropdownRef = useRef(null);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)){
+                setShowOptions(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+    }, []);
+        
     useEffect( () => {
         if (showOptions) {
             setIsDropdownVisibleOpen(true);
@@ -18,7 +34,7 @@ export function LinkModules() {
     }, [showOptions]);
 
     return (
-        <div className="dou-strip">
+        <div className="dou-strip" ref={dropdownRef}>
             <div
                 className="dou-strip-button"
                 onClick={() => setShowOptions(!showOptions)}
@@ -29,9 +45,9 @@ export function LinkModules() {
             </div>
             {isDropdownVisible && (
                 <div className={`dou-strip-options ${showOptions? "open": ""}`}>
-                    <button className="dou-strip-option">Contenido</button>
-                    <button className="dou-strip-option">Contest</button>
-                    <button className="dou-strip-option">Ejercicios</button>
+                    <Link to="/content" className="dou-strip-option">Contenido</Link>
+                    <Link to="/constest" className="dou-strip-option">Contest</Link>
+                    <Link to="/challeges" className="dou-strip-option">Ejercicios</Link>
                 </div>
             )}
         </div>
