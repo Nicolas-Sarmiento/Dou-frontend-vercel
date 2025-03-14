@@ -8,6 +8,9 @@
     background-color: transparent;
     border: none;
     color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .dou-back-login svg {
@@ -18,6 +21,7 @@
 }
 .dou-back-login svg:hover {
     scale: 1.1;
+    fill: #B5E2F2;
 }
 
 .dou-login-container {
@@ -28,6 +32,30 @@
     height: 100%;
     max-width: 600px;
     transition-duration: 0.3s;
+    position: relative;
+    padding: auto;
+}
+
+.dou-login-form.register {
+    gap: 10px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.dou-form-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.dou-dynamic-text {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    height: 30px;
+
 }
 
 .dou-login-form {
@@ -65,6 +93,10 @@
     transition-duration: 0.3s;
 }
 
+.dou-login-input.password {
+    width: 100%;
+}
+
 .dou-login-input:hover {
     border-color: #B5E2F2;
 }
@@ -75,7 +107,6 @@
 
 .dou-login-button-submit {
     box-sizing: border-box;
-    border: 2px solid transparent;
     border-radius: 5px;
     background-color: #B5E2F2;
     color: #000;
@@ -84,11 +115,13 @@
     cursor: pointer;
     border: none;
     transition-duration: 0.3s;
+    margin: 30px;
 }
 
 .dou-login-button-submit:hover {
-    border-color: #B5E2F2;
-    scale: 1.05;
+    background-color: #87CEEB; 
+    border-color: #87CEEB;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dou-login-register-text {
@@ -100,4 +133,10 @@
     border: none;
     color: #B5E2F2;
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .dou-form-row {
+        flex-direction: column; 
+    }
 }

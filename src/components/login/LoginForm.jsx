@@ -6,7 +6,6 @@ import "../login/login.css";
 
 export function LoginForm ( { onSwitchToRegister, onSwitchToForgotPassword } ) {
     const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
     const [user, setUser] = useState(null);
@@ -17,6 +16,8 @@ export function LoginForm ( { onSwitchToRegister, onSwitchToForgotPassword } ) {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const password = e.target.password.value;
+
         setLoading(true);
         try {
             await login(email, password);
@@ -44,9 +45,8 @@ export function LoginForm ( { onSwitchToRegister, onSwitchToForgotPassword } ) {
                 <input 
                     className="dou-login-input"
                     type="password"
+                    name="password"
                     placeholder="Contraseña"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
                     required
                 />
                 

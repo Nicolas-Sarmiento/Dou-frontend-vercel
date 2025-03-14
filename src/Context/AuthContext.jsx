@@ -32,7 +32,6 @@ export function AuthProvider({ children }) {
         try {
             
             if (email === "test@example.com" && password === "12345") {
-               
                 const fakeToken = "fake-jwt-token-123";
                 const fakeUser = {
                     id: 1,
