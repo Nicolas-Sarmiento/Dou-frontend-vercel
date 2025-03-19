@@ -7,6 +7,7 @@ import { RegisterForm } from "../components/login/RegisterForm";
 import { ForgotPasswordForm } from "../components/login/ForgotPasswordForm";
 import { useAuth } from "../Context/AuthContext";
 import { EducationContent } from "../components/Education_content";
+import { About } from "../components/about";
 
 export function AppRoutes () {
     const navigate = useNavigate();
@@ -43,6 +44,8 @@ export function AppRoutes () {
                 <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
                     <Route path="education" element={<EducationContent/>} />
                 </Route>
+
+                <Route path="/about" element={<About />} />
                 
                 <Route path="*" element={<h1>404 - Página no encontrada</h1>} />
             </Routes>

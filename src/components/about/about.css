@@ -1,0 +1,26 @@
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    max-height: 600px;
+}
+
+.content-container h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    color: hwb(12 38% 7%);
+}
+
+.content-container p {
+    font-size: 1rem;
+    color: #B5E2F2;
+    width: 50%;
+}
+
+.content-container li {
+    color: #B5E2F2;
+}
