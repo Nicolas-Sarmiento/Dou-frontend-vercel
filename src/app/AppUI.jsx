@@ -10,7 +10,7 @@ export function AppUI () {
     
 
     return (
-        <Router basename="/Dou-frontend/">
+        <Router>
             <AuthProvider>
                 <div className="app">
                     <div className="star" id="position"></div>
