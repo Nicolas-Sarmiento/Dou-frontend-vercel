@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Header } from "../components/header";
 import "./meteor.css";
+import "./index.css";
 import { AppRoutes } from "./AppRoutes";
 import { AuthProvider } from "../Context/AuthContext";
 
