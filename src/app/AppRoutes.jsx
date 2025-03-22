@@ -10,6 +10,7 @@ import { EducationContent } from "../components/Education_content";
 import { About } from "../components/about";
 
 export function AppRoutes () {
+    const navigate = useNavigate();
 
 
     function ProtectedRoute({ children }) {
