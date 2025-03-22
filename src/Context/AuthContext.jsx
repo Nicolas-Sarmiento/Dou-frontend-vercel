@@ -20,9 +20,9 @@ export function AuthProvider({ children }) {
                 email: "usuario@ejemplo.com",
                 name: "Federico",
             });
-            navigate("/dashboard", {replace: true});
+            navigate("/Dou-frontend/dashboard", {replace: true});
         } else {
-            navigate("/login", {replace: true});
+            navigate("/Dou-frontend/login", {replace: true});
         }
         setLoading(false);
     }, []);
@@ -43,7 +43,7 @@ export function AuthProvider({ children }) {
                 setUser(fakeUser);
                 localStorage.setItem("token", fakeToken);
                 console.log("Iniciaste sesión correctamente");
-                navigate("/dashboard", {replace: true});
+                navigate("/Dou-frontend/dashboard", {replace: true});
             } else {
                 throw new Error("Credenciales inválidas");
             }
@@ -56,7 +56,7 @@ export function AuthProvider({ children }) {
         setUser(null);
         setToken(null);
         localStorage.removeItem("token");
-        navigate("/login", {replace: true});
+        navigate("/Dou-frontend/login", {replace: true});
     };
 
     

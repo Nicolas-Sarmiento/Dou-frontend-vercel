@@ -5,7 +5,7 @@ import { useAuth } from "../../Context/AuthContext";
 
 export function Dashboard () {
     const { user } = useAuth();
-    const isExactDashboard = useMatch({path: "/dashboard", end: true});
+    const isExactDashboard = useMatch({path: "/Dou-frontend/dashboard", end: true});
 
     return (
         <>

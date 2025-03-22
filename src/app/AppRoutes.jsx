@@ -10,42 +10,42 @@ import { EducationContent } from "../components/Education_content";
 import { About } from "../components/about";
 
 export function AppRoutes () {
-    const navigate = useNavigate();
+
 
     function ProtectedRoute({ children }) {
         const { user, loading } = useAuth();
         const navigate = useNavigate();
         if (loading) return <div>Cargando...</div>;
-        return user ? children : <LoginForm onSwitchToRegister={() => navigate("/register")} onSwitchToForgotPassword={() => navigate("/forgot-password")} />;
+        return user ? children : <LoginForm onSwitchToRegister={() => navigate("/Dou-frontend/register")} onSwitchToForgotPassword={() => navigate("/Dou-frontend/forgot-password")} />;
     }
     
     return (
         <AppContainer>
             <Routes>
                 <Route
-                    path="/login"
+                    path="/Dou-frontend/login"
                     element={
                         <LoginForm
-                            onSwitchToRegister={() => navigate("/register")}
+                            onSwitchToRegister={() => navigate("/Dou-frontend/register")}
                             onSwitchToForgotPassword={() => navigate("/forgot-password")}
                         />
                     }
                 />
-                <Route path="/" element={<Navigate to="/login" replace />} />
+                <Route path="/Dou-frontend" element={<Navigate to="/Dou-frontend/login" replace />} />
                 
                 <Route
-                    path="/register"
-                    element={<RegisterForm onSwitchToLogin={() => navigate("/login")} />}
+                    path="/Dou-frontend/register"
+                    element={<RegisterForm onSwitchToLogin={() => navigate("/Dou-frontend/login")} />}
                 />
                 <Route
-                    path="/forgot-password"
-                    element={<ForgotPasswordForm onSwitchToLogin={() => navigate("/login")} />}
+                    path="/Dou-frontend/forgot-password"
+                    element={<ForgotPasswordForm onSwitchToLogin={() => navigate("/Dou-frontend/login")} />}
                 />
-                <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
+                <Route path="/Dou-frontend/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}>
                     <Route path="education" element={<EducationContent/>} />
                 </Route>
 
-                <Route path="/about" element={<About />} />
+                <Route path="/Dou-frontend/about" element={<About />} />
                 
                 <Route path="*" element={<h1>404 - Página no encontrada</h1>} />
             </Routes>

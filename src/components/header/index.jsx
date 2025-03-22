@@ -42,7 +42,7 @@ export function Header () {
 
     const handleLogout = async () => {
         await logout();
-        navigate("/login");
+        navigate("/Dou-frontend/login");
     }
 
     const handleMainClick = () => {
@@ -78,7 +78,7 @@ export function Header () {
                     </>
                 ) : (
                     <>
-                        <Link to="/about" className="dou-header-button">Sobre nosotros</Link>
+                        <Link to="/Dou-frontend/about" className="dou-header-button">Sobre nosotros</Link>
                     </>
                 )}
             </nav>
