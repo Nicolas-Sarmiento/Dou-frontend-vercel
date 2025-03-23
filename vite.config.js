@@ -4,5 +4,5 @@ import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [react(), svgr()],
-  base: '/Dou-frontend/', // Ajusta esto según la URL de tu app en Vercel
+  base: '/', // Ajusta esto según la URL de tu app en Vercel
 })
